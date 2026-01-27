@@ -1,16 +1,19 @@
 import { Field, ObjectType } from "type-graphql";
 
 @ObjectType()
-export class AppointmentModel {
+export class PostModel {
   @Field(() => String) 
   id: String;
 
   @Field(() => String) 
-  customerId: String;
+  title: string;
+
+  @Field(() => String) 
+  content: string;
+
+  @Field(() => String) 
+  ownerId: string;
 
   @Field(() => Date) 
-  startsAt: Date;
-
-  @Field(() => Date) 
-  endsAt: Date;
+  createdAt: Date;
 }
